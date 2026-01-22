@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" spacing="15" style="-fx-padding: 25; -fx-background-color: #1a1a1a; -fx-border-color: #9c4dff; -fx-border-width: 2; -fx-border-radius: 15;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.Admin.TariffEditDialogController">
+
+    <Label style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: white; -fx-effect: dropshadow(three-pass-box, rgba(156,77,255,0.5), 0, 0, 0, 3);" text="Изменение тарифа" />
+
+    <GridPane hgap="15" style="-fx-padding: 10;" vgap="15">
+        <Label style="-fx-text-fill: #e0e0e0; -fx-font-size: 14px;" text="Название:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+        <TextField fx:id="nameField" style="-fx-background-color: #2b2b2b; -fx-text-fill: #e0e0e0; -fx-border-color: #9c4dff; -fx-border-width: 1; -fx-border-radius: 5; -fx-pref-width: 200;" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+        <Label style="-fx-text-fill: #e0e0e0; -fx-font-size: 14px;" text="Цена за час:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+        <TextField fx:id="priceField" style="-fx-background-color: #2b2b2b; -fx-text-fill: #e0e0e0; -fx-border-color: #9c4dff; -fx-border-width: 1; -fx-border-radius: 5; -fx-pref-width: 200;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+      <columnConstraints>
+         <ColumnConstraints />
+         <ColumnConstraints />
+      </columnConstraints>
+      <rowConstraints>
+         <RowConstraints />
+         <RowConstraints />
+      </rowConstraints>
+    </GridPane>
+
+    <HBox alignment="CENTER" spacing="15">
+        <Button fx:id="applyButton" defaultButton="true" style="-fx-background-color: linear-gradient(to bottom, #2b2b2b, #1a1a1a);                        -fx-text-fill: #e0e0e0;                        -fx-border-color: #9c4dff;                        -fx-border-width: 2;                        -fx-border-radius: 10;                        -fx-background-radius: 10;                        -fx-font-size: 14px;                        -fx-font-weight: bold;                        -fx-pref-width: 120;                        -fx-cursor: hand;" text="Применить" />
+        <Button fx:id="cancelButton" cancelButton="true" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: #9c4dff; -fx-border-width: 2; -fx-border-radius: 10; -fx-background-radius: 10; -fx-font-size: 14px; -fx-font-weight: bold; -fx-pref-width: 100; -fx-cursor: hand;" text="Отмена" />
+    </HBox>
+</VBox>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox fx:id="mainContainer" alignment="TOP_CENTER" fillWidth="false" prefHeight="700.0" prefWidth="900.0" spacing="15" style="-fx-padding: 25; -fx-background-color: #121212;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.Admin.MenuAdminController">
+
+    <!-- Заголовок с эффектом свечения -->
+    <HBox prefHeight="70.0" prefWidth="800.0" style="-fx-background-color: rgba(30,30,30,0.9); -fx-background-radius: 15; -fx-border-color: #9c4dff; -fx-border-width: 2; -fx-border-radius: 15; -fx-alignment: CENTER;">
+        <Label style="-fx-text-fill: white; -fx-font-size: 32px; -fx-font-weight: bold; -fx-effect: dropshadow(three-pass-box, rgba(156,77,255,0.8), 0, 0, 0, 8);" text="Меню администратора" />
+    </HBox>
+
+    <!-- Основные кнопки меню -->
+    <VBox alignment="CENTER" spacing="15" style="-fx-padding: 20;">
+
+        <Button fx:id="service" onAction="#handleComputer" style="-fx-background-color: linear-gradient(to bottom, #2b2b2b, #1a1a1a);                        -fx-text-fill: #e0e0e0;                        -fx-border-color: #9c4dff;                        -fx-border-width: 2;                        -fx-border-radius: 15;                        -fx-background-radius: 15;                        -fx-font-size: 18px;                        -fx-font-weight: bold;                        -fx-pref-width: 350;                        -fx-pref-height: 50;                        -fx-cursor: hand;" text="Меню ПК" />
+
+        <Button fx:id="tariff" onAction="#handleTariff" style="-fx-background-color: linear-gradient(to bottom, #2b2b2b, #1a1a1a);                        -fx-text-fill: #e0e0e0;                        -fx-border-color: #9c4dff;                        -fx-border-width: 2;                        -fx-border-radius: 15;                        -fx-background-radius: 15;                        -fx-font-size: 18px;                        -fx-font-weight: bold;                        -fx-pref-width: 350;                        -fx-pref-height: 50;                        -fx-cursor: hand;" text="Меню тарифов" />
+
+        <Button fx:id="order" onAction="#handleBooking" style="-fx-background-color: linear-gradient(to bottom, #2b2b2b, #1a1a1a);                        -fx-text-fill: #e0e0e0;                        -fx-border-color: #9c4dff;                        -fx-border-width: 2;                        -fx-border-radius: 15;                        -fx-background-radius: 15;                        -fx-font-size: 18px;                        -fx-font-weight: bold;                        -fx-pref-width: 350;                        -fx-pref-height: 50;                        -fx-cursor: hand;" text="Меню броней" />
+      <Button fx:id="menuGroup" onAction="#handleGroup" style="-fx-background-color: linear-gradient(to bottom, #2b2b2b, #1a1a1a);                        -fx-text-fill: #e0e0e0;                        -fx-border-color: #9c4dff;                        -fx-border-width: 2;                        -fx-border-radius: 15;                        -fx-background-radius: 15;                        -fx-font-size: 18px;                        -fx-font-weight: bold;                        -fx-pref-width: 350;                        -fx-pref-height: 50;                        -fx-cursor: hand;" text="Меню групп" />
+
+        <Button fx:id="user" onAction="#handleUser" style="-fx-background-color: linear-gradient(to bottom, #2b2b2b, #1a1a1a);                        -fx-text-fill: #e0e0e0;                        -fx-border-color: #9c4dff;                        -fx-border-width: 2;                        -fx-border-radius: 15;                        -fx-background-radius: 15;                        -fx-font-size: 18px;                        -fx-font-weight: bold;                        -fx-pref-width: 350;                        -fx-pref-height: 50;                        -fx-cursor: hand;" text="Пользователи" />
+
+        <Button fx:id="reviews" onAction="#handleReviews" style="-fx-background-color: linear-gradient(to bottom, #2b2b2b, #1a1a1a);                        -fx-text-fill: #e0e0e0;                        -fx-border-color: #9c4dff;                        -fx-border-width: 2;                        -fx-border-radius: 15;                        -fx-background-radius: 15;                        -fx-font-size: 18px;                        -fx-font-weight: bold;                        -fx-pref-width: 350;                        -fx-pref-height: 50;                        -fx-cursor: hand;" text="Отзывы" />
+        <Button fx:id="ourInfo" onAction="#handleOurInfo" style="-fx-background-color: linear-gradient(to bottom, #2b2b2b, #1a1a1a);                        -fx-text-fill: #e0e0e0;                        -fx-border-color: #9c4dff;                        -fx-border-width: 2;                        -fx-border-radius: 15;                        -fx-background-radius: 15;                        -fx-font-size: 18px;                        -fx-font-weight: bold;                        -fx-pref-width: 350;                        -fx-pref-height: 50;                        -fx-cursor: hand;" text="О нас" />
+    </VBox>
+
+    <!-- Кнопка назад -->
+    <Button fx:id="backButton" onAction="#handleBack" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: #9c4dff; -fx-border-width: 2; -fx-border-radius: 15; -fx-background-radius: 15; -fx-font-size: 16px; -fx-font-weight: bold; -fx-pref-width: 150; -fx-pref-height: 40; -fx-cursor: hand;" text="Назад">
+        <VBox.margin>
+            <Insets top="20.0" />
+        </VBox.margin>
+    </Button>
+</VBox>

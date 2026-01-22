@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="mainContainer" alignment="TOP_CENTER" fillWidth="false" prefHeight="688.0" prefWidth="676.0" spacing="20" style="-fx-padding: 20; -fx-background-color: #121212;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.Сlient.WindowClientController">
+
+   <!-- Заголовок с эффектом неоновой подсветки -->
+   <Label prefHeight="18.0" prefWidth="354.0" style="-fx-text-fill: white; -fx-font-size: 32px; -fx-font-weight: bold; -fx-effect: dropshadow(three-pass-box, rgba(156,77,255,0.8), 0, 0, 0, 8);" text="nevermore">
+      <font>
+         <Font name="Arial" />
+      </font>
+   </Label>
+
+   <VBox alignment="CENTER" prefHeight="462.0" prefWidth="454.0" style="-fx-background-radius: 15; -fx-background-color: rgba(30,30,30,0.7); -fx-padding: 20;">
+      <children>
+         <Button mnemonicParsing="false" onAction="#handleAddBalance" prefHeight="21.0" prefWidth="300.0" style="-fx-background-color: linear-gradient(to bottom, #2b2b2b, #1a1a1a); -fx-text-fill: #e0e0e0; -fx-border-color: white; -fx-border-width: 2; -fx-border-radius: 5; -fx-background-radius: 5; -fx-cursor: hand;" text="Пополнить баланс">
+            <font>
+               <Font size="18.0" />
+            </font>
+         </Button>
+
+         <Button mnemonicParsing="false" onAction="#handleClientInfo" prefHeight="50.0" prefWidth="300.0" style="-fx-background-color: linear-gradient(to bottom, #2b2b2b, #1a1a1a); -fx-text-fill: #e0e0e0; -fx-border-color: white; -fx-border-width: 2; -fx-border-radius: 5; -fx-background-radius: 5; -fx-cursor: hand;" text="Личный кабинет">
+            <VBox.margin>
+               <Insets bottom="20.0" top="20.0" />
+            </VBox.margin>
+            <font>
+               <Font size="18.0" />
+            </font>
+         </Button>
+
+         <Button mnemonicParsing="false" onAction="#handleBookingPc" prefHeight="22.0" prefWidth="300.0" style="-fx-background-color: linear-gradient(to bottom, #2b2b2b, #1a1a1a); -fx-text-fill: #e0e0e0; -fx-border-color: white; -fx-border-width: 2; -fx-border-radius: 5; -fx-background-radius: 5; -fx-cursor: hand;" text="Забронировать компьютер">
+            <VBox.margin>
+               <Insets bottom="20.0" />
+            </VBox.margin>
+            <font>
+               <Font size="18.0" />
+            </font>
+         </Button>
+
+         <Button mnemonicParsing="false" onAction="#handleReviews" prefHeight="50.0" prefWidth="300.0" style="-fx-background-color: linear-gradient(to bottom, #2b2b2b, #1a1a1a); -fx-text-fill: #e0e0e0; -fx-border-color: white; -fx-border-width: 2; -fx-border-radius: 5; -fx-background-radius: 5; -fx-cursor: hand;" text="Отзывы">
+            <VBox.margin>
+               <Insets bottom="20.0" />
+            </VBox.margin>
+            <font>
+               <Font size="18.0" />
+            </font>
+         </Button>
+
+         <Button mnemonicParsing="false" onAction="#handleTariff" prefHeight="50.0" prefWidth="300.0" style="-fx-background-color: linear-gradient(to bottom, #2b2b2b, #1a1a1a); -fx-text-fill: #e0e0e0; -fx-border-color: white; -fx-border-width: 2; -fx-border-radius: 5; -fx-background-radius: 5; -fx-cursor: hand;" text="Тарифы">
+            <font>
+               <Font size="18.0" />
+            </font>
+         </Button>
+         <!-- Стилизованные кнопки с эффектом свечения при наведении -->
+         <Button mnemonicParsing="false" onAction="#handleInfoClub" prefHeight="20.0" prefWidth="300.0" style="-fx-background-color: linear-gradient(to bottom, #2b2b2b, #1a1a1a); -fx-text-fill: #e0e0e0; -fx-border-color: white; -fx-border-width: 2; -fx-border-radius: 5; -fx-background-radius: 5; -fx-cursor: hand;" text="О компьютерном клубе">
+            <VBox.margin>
+               <Insets top="20.0" />
+            </VBox.margin>
+            <font>
+               <Font size="18.0" />
+            </font>
+         </Button>
+
+         <Button mnemonicParsing="false" onAction="#handleShowAllPc" prefHeight="93.0" prefWidth="300.0" style="-fx-background-color: linear-gradient(to bottom, #2b2b2b, #1a1a1a); -fx-text-fill: #e0e0e0; -fx-border-color: white; -fx-border-width: 2; -fx-border-radius: 5; -fx-background-radius: 5; -fx-cursor: hand;" text="Список компьютеров">
+            <VBox.margin>
+               <Insets bottom="20.0" top="20.0" />
+            </VBox.margin>
+            <font>
+               <Font size="18.0" />
+            </font>
+         </Button>
+      
+         <!-- Кнопка назад с эффектом свечения -->
+         <Button fx:id="backButton" onAction="#handleBack" prefHeight="30.0" prefWidth="94.0" style="-fx-pref-height: 40; -fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: #9c4dff; -fx-border-width: 2; -fx-border-radius: 5; -fx-cursor: hand;" text="Назад">
+            <VBox.margin>
+               <Insets bottom="20.0" top="30.0" />
+            </VBox.margin>
+         </Button>
+      </children>
+   </VBox>
+</VBox>

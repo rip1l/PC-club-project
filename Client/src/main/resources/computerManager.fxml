@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane style="-fx-background-color: #121212;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.Admin.ComputersManagementController">
+
+    <top>
+        <HBox alignment="CENTER" spacing="20" style="-fx-background-color: rgba(30,30,30,0.9);                      -fx-background-radius: 0 0 15 15;                      -fx-border-color: #9c4dff;                      -fx-border-width: 0 0 2 0;                      -fx-padding: 15;">
+         <Label style="-fx-text-fill: white; -fx-font-size: 32px; -fx-font-weight: bold; -fx-effect: dropshadow(three-pass-box, rgba(156,77,255,0.8), 0, 0, 0, 5);" text="Управление компьютерами" />
+        </HBox>
+    </top>
+
+    <center>
+        <VBox alignment="CENTER" spacing="15" style="-fx-padding: 20;">
+            <TableView fx:id="computersTable" style="                 -fx-background-color: #1a1a1a;                 -fx-table-cell-border-color: transparent;                 -fx-selection-bar: #9c4dff;                 -fx-selection-bar-non-focused: #9c4dff;             ">
+                <columns>
+                    <TableColumn fx:id="idColumn" prefWidth="50" style="-fx-text-fill: #9c4dff; -fx-alignment: CENTER;" text="ID">
+                        <cellValueFactory><PropertyValueFactory property="computerId" /></cellValueFactory>
+                    </TableColumn>
+                    <TableColumn fx:id="specsColumn" prefWidth="516.0" style="-fx-text-fill: #9c4dff;" text="Характеристики">
+                        <cellValueFactory><PropertyValueFactory property="specs" /></cellValueFactory>
+                    </TableColumn>
+                    <TableColumn fx:id="statusColumn" prefWidth="316.0" style="-fx-text-fill: #9c4dff; -fx-alignment: CENTER;" text="Статус">
+                        <cellValueFactory><PropertyValueFactory property="alive" /></cellValueFactory>
+                    </TableColumn>
+                </columns>
+            </TableView>
+
+            <HBox alignment="CENTER" spacing="20" style="-fx-padding: 15;                          -fx-background-color: rgba(30,30,30,0.7);                          -fx-background-radius: 10;                          -fx-border-color: #9c4dff;                          -fx-border-width: 1;                          -fx-border-radius: 10;">
+                <Button fx:id="refreshButton" onAction="#handleRefresh" style="-fx-background-color: linear-gradient(to bottom, #3a1c71, #9c4dff);                                -fx-text-fill: white;                                -fx-font-size: 14px;                                -fx-font-weight: bold;                                -fx-pref-width: 180;                                -fx-pref-height: 35;                                -fx-background-radius: 5;                                -fx-cursor: hand;" text="Обновить список" />
+
+                <Button fx:id="statusButton" onAction="#handleChangeStatus" style="-fx-background-color: linear-gradient(to bottom, #3a1c71, #9c4dff);                                -fx-text-fill: white;                                -fx-font-size: 14px;                                -fx-font-weight: bold;                                -fx-pref-width: 180;                                -fx-pref-height: 35;                                -fx-background-radius: 5;                                -fx-cursor: hand;" text="Изменить статус" />
+            </HBox>
+        </VBox>
+    </center>
+
+    <bottom>
+        <HBox alignment="CENTER" spacing="15" style="-fx-padding: 15;                      -fx-background-color: rgba(30,30,30,0.7);                      -fx-background-radius: 15 15 0 0;">
+            <Button fx:id="backButton" onAction="#handleBack" style="-fx-background-color: transparent;                            -fx-text-fill: #9c4dff;                            -fx-border-color: #9c4dff;                            -fx-border-width: 2;                            -fx-border-radius: 10;                            -fx-background-radius: 10;                            -fx-font-size: 14px;                            -fx-font-weight: bold;                            -fx-pref-width: 100;                            -fx-cursor: hand;" text="Назад" />
+
+            <Label fx:id="statusLabel" style="-fx-text-fill: #9c4dff;                           -fx-font-size: 14px;                           -fx-font-weight: bold;" />
+        </HBox>
+    </bottom>
+</BorderPane>

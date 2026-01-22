@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" spacing="20" style="-fx-background-color: #121212;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.RegisterController">
+
+    <Pane maxHeight="388.0" maxWidth="450.0" prefHeight="388.0" prefWidth="450.0" style="-fx-background-color: rgba(30,30,30,0.9); -fx-background-radius: 15; -fx-border-color: #9c4dff; -fx-border-width: 2; -fx-border-radius: 15;">
+
+        <!-- Заголовок формы -->
+        <Label layoutX="143.0" layoutY="39.0" prefHeight="40.0" prefWidth="165.0" style="-fx-effect: dropshadow(three-pass-box, rgba(156,77,255,0.5), 0, 0, 0, 5);" text="Регистрация" textFill="#f4f4f4">
+            <font>
+                <Font name="System Bold" size="25.0" />
+            </font>
+        </Label>
+
+        <!-- Поля ввода -->
+        <TextField fx:id="usernameField" layoutX="120.0" layoutY="112.0" prefHeight="42.0" prefWidth="211.0" promptText="Введите логин" style="-fx-background-color: #2b2b2b; -fx-text-fill: white; -fx-border-color: white; -fx-border-width: 1; -fx-border-radius: 5; -fx-background-radius: 5; -fx-prompt-text-fill: #a0a0a0;" />
+
+        <PasswordField fx:id="passwordField" layoutX="120.0" layoutY="174.0" prefHeight="40.0" prefWidth="211.0" promptText="Введите пароль" style="-fx-background-color: #2b2b2b; -fx-text-fill: white; -fx-border-color: white; -fx-border-width: 1; -fx-border-radius: 5; -fx-background-radius: 5; -fx-prompt-text-fill: #a0a0a0;" />
+
+        <PasswordField fx:id="confirmPasswordField" layoutX="120.0" layoutY="232.0" prefHeight="42.0" prefWidth="211.0" promptText="Повторите пароль" style="-fx-background-color: #2b2b2b; -fx-text-fill: white; -fx-border-color: white; -fx-border-width: 1; -fx-border-radius: 5; -fx-background-radius: 5; -fx-prompt-text-fill: #a0a0a0;" />
+
+        <!-- Кнопка регистрации -->
+        <Button fx:id="registerButton" layoutX="120.0" layoutY="302.0" prefHeight="42.0" prefWidth="211.0" style="-fx-background-color: linear-gradient(to bottom, #9c4dff,#3a1c71); -fx-text-fill: white; -fx-background-radius: 5; -fx-border-radius: 5; -fx-cursor: hand; -fx-effect: dropshadow(three-pass-box, rgba(156,77,255,0.3), 5, 0, 0, 1);" text="Зарегистрироваться">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Button>
+
+        <!-- Кнопка назад -->
+        <Button fx:id="ExitButton" layoutX="355.0" layoutY="24.0" onAction="#handleExit" prefHeight="30.0" prefWidth="80.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: #9c4dff; -fx-border-width: 1; -fx-border-radius: 5; -fx-background-radius: 5; -fx-cursor: hand;" text="Назад">
+            <font>
+                <Font size="12.0" />
+            </font>
+        </Button>
+    </Pane>
+</VBox>

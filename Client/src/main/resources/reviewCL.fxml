@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="mainContainer" alignment="TOP_CENTER" fillWidth="false" prefHeight="600.0" prefWidth="850.0" spacing="15" style="-fx-padding: 25; -fx-background-color: #121212;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.Сlient.ReviewsCLController">
+
+    <!-- Верхняя панель с заголовком и кнопкой назад -->
+    <HBox alignment="CENTER_LEFT" spacing="20" style="-fx-padding: 0 0 15 0;">
+        <Button fx:id="backButton" onAction="#handleBack" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: #9c4dff; -fx-border-width: 2; -fx-border-radius: 10; -fx-background-radius: 10; -fx-font-size: 14px; -fx-cursor: hand; -fx-pref-width: 80; -fx-pref-height: 35;" text="← Назад">
+            <font>
+                <Font name="System Bold" />
+            </font>
+        </Button>
+
+        <Label style="-fx-text-fill: white; -fx-font-size: 32px; -fx-font-weight: bold; -fx-effect: dropshadow(three-pass-box, rgba(156,77,255,0.8), 0, 0, 0, 5);" text="Отзывы о клубе" />
+    </HBox>
+
+    <!-- Панель управления -->
+    <HBox alignment="CENTER" spacing="20" style="-fx-padding: 10; -fx-background-color: rgba(30,30,30,0.7); -fx-background-radius: 10; -fx-border-color: #9c4dff; -fx-border-width: 1; -fx-border-radius: 10;">
+        <!-- Комбобокс сортировки -->
+        <ComboBox fx:id="sortComboBox" prefWidth="180.0" style="-fx-background-color: #2b2b2b;                         -fx-text-fill: white;                         -fx-border-color: #9c4dff;                         -fx-border-width: 1;                         -fx-border-radius: 5;                         -fx-background-radius: 5;">
+            <items>
+                <FXCollections fx:factory="observableArrayList">
+                    <String fx:value="По возрастанию рейтинга" />
+                    <String fx:value="По убыванию рейтинга" />
+                </FXCollections>
+            </items>
+        </ComboBox>
+
+        <!-- Кнопка сортировки -->
+        <Button fx:id="sortButton" onAction="#handleSortButtonClick" style="-fx-background-color: linear-gradient(to bottom, #3a1c71, #9c4dff);                        -fx-text-fill: white;                        -fx-font-size: 14px;                        -fx-font-weight: bold;                        -fx-pref-height: 35;                        -fx-pref-width: 120;                        -fx-background-radius: 5;                        -fx-cursor: hand;" text="Применить" />
+
+        <!-- Кнопка добавления отзыва -->
+        <Button fx:id="addReviewButton" onAction="#addReview" style="-fx-background-color: linear-gradient(to bottom, #3a1c71, #9c4dff);                        -fx-text-fill: white;                        -fx-font-size: 14px;                        -fx-font-weight: bold;                        -fx-pref-height: 35;                        -fx-pref-width: 150;                        -fx-background-radius: 5;                        -fx-cursor: hand;" text="+ Новый отзыв" />
+    </HBox>
+
+    <!-- Список отзывов с прокруткой -->
+    <ScrollPane fitToWidth="true" prefHeight="390.0" prefWidth="682.0" style="-fx-background: #121212; -fx-border-color: #121212;">
+        <VBox fx:id="reviewsListContainer" alignment="TOP_CENTER" spacing="15" style="-fx-padding: 10; -fx-background-color: #121212;">
+            <!-- Отзывы будут добавляться сюда динамически -->
+        </VBox>
+    </ScrollPane>
+</VBox>

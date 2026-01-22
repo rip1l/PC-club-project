@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="mainContainer" alignment="TOP_CENTER" fillWidth="false" prefHeight="700.0" prefWidth="1000.0" spacing="15" style="-fx-padding: 25; -fx-background-color: #121212;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.Сlient.ViewTariffCLController">
+
+    <!-- Верхняя панель с заголовком и кнопкой назад -->
+    <HBox alignment="CENTER_LEFT" spacing="20" style="-fx-padding: 0 0 15 0;">
+        <Button fx:id="backButton" onAction="#handleBack" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: #9c4dff; -fx-border-width: 2; -fx-border-radius: 10; -fx-background-radius: 10; -fx-font-size: 14px; -fx-cursor: hand; -fx-pref-width: 80; -fx-pref-height: 35;" text="← Назад">
+            <font>
+                <Font name="System Bold" />
+            </font>
+        </Button>
+
+        <Label style="-fx-text-fill: white; -fx-font-size: 32px; -fx-font-weight: bold; -fx-effect: dropshadow(three-pass-box, rgba(156,77,255,0.8), 0, 0, 0, 5);" text="Тарифы клуба" />
+    </HBox>
+
+    <!-- Панель управления поиском и фильтрацией -->
+    <VBox style="-fx-background-color: rgba(30,30,30,0.7);                 -fx-background-radius: 10;                 -fx-border-color: #9c4dff;                 -fx-border-width: 1;                 -fx-border-radius: 10;                 -fx-padding: 15;">
+
+        <!-- Строка поиска -->
+        <HBox alignment="CENTER" spacing="15">
+            <Label style="-fx-text-fill: #e0e0e0; -fx-font-size: 16px; -fx-min-width: 80;" text="Поиск:" />
+            <TextField fx:id="searchField" prefWidth="300.0" promptText="Название тарифа" style="-fx-background-color: #2b2b2b;                             -fx-text-fill: white;                             -fx-border-color: #9c4dff;                             -fx-border-width: 1;                             -fx-border-radius: 5;                             -fx-background-radius: 5;" />
+            <Button fx:id="searchButton" onAction="#applySearch" style="-fx-background-color: linear-gradient(to bottom, #3a1c71, #9c4dff);                            -fx-text-fill: white;                            -fx-font-size: 14px;                            -fx-font-weight: bold;                            -fx-pref-height: 35;                            -fx-pref-width: 120;                            -fx-background-radius: 5;                            -fx-cursor: hand;" text="Найти" />
+        </HBox>
+
+        <!-- Строка фильтров -->
+        <HBox alignment="CENTER" spacing="15" style="-fx-padding: 15 0 0 0;" />
+    </VBox>
+
+    <!-- Основное окно с тарифами -->
+    <ScrollPane fitToWidth="true" style="-fx-background: #121212; -fx-border-color: #121212;">
+        <VBox fx:id="servicesContainer" alignment="TOP_CENTER" prefHeight="449.0" prefWidth="930.0" spacing="15" style="-fx-padding: 15; -fx-background-color: #121212;">
+            <!-- Тарифы будут добавляться сюда динамически -->
+
+            <!-- Пример тарифа (шаблон) -->
+            <VBox fx:id="rateTemplate" style="-fx-background-color: rgba(30,30,30,0.7);                          -fx-background-radius: 10;                          -fx-border-color: #9c4dff;                          -fx-border-width: 1;                          -fx-border-radius: 10;                          -fx-padding: 15;                          -fx-min-width: 900;" visible="false">
+                <HBox alignment="CENTER_LEFT" spacing="20">
+                    <VBox alignment="CENTER_LEFT" spacing="5" style="-fx-min-width: 300;">
+                        <Label fx:id="rateNameLabel" style="-fx-text-fill: #9c4dff; -fx-font-size: 20px; -fx-font-weight: bold;" text="Название тарифа" />
+                        <Label fx:id="rateDescLabel" style="-fx-text-fill: #e0e0e0; -fx-font-size: 14px; -fx-wrap-text: true;" text="Описание тарифа" wrapText="true" />
+                    </VBox>
+
+                    <VBox alignment="CENTER_RIGHT" spacing="5" style="-fx-min-width: 200;">
+                        <Label style="-fx-text-fill: #a0a0a0; -fx-font-size: 14px;" text="Цена за час:" />
+                        <Label fx:id="ratePriceLabel" style="-fx-text-fill: #9c4dff; -fx-font-size: 18px; -fx-font-weight: bold;" text="0 руб." />
+                    </VBox>
+
+                    <VBox alignment="CENTER_RIGHT" spacing="5" style="-fx-min-width: 200;">
+                        <Label style="-fx-text-fill: #a0a0a0; -fx-font-size: 14px;" text="Доступные ПК:" />
+                        <Label fx:id="ratePcCountLabel" style="-fx-text-fill: #e0e0e0; -fx-font-size: 16px;" text="10 шт." />
+                    </VBox>
+                </HBox>
+            </VBox>
+        </VBox>
+    </ScrollPane>
+</VBox>
